@@ -49,7 +49,6 @@
 #import "RosyWriterCapturePipeline.h"
 
 #import "RosyWriterOpenGLRenderer.h"
-#import "RosyWriterCPURenderer.h"
 #import "RosyWriterCIFilterRenderer.h"
 #import "RosyWriterOpenCVRenderer.h"
 
@@ -61,6 +60,8 @@
 #import <ImageIO/CGImageProperties.h>
 
 #include <objc/runtime.h> // for objc_loadWeak() and objc_storeWeak()
+
+#import "RosyWriterCPU-Swift.h"
 
 /*
  RETAINED_BUFFER_COUNT is the number of pixel buffers we expect to hold on to from the renderer. This value informs the renderer how to size its buffer pool and how many pixel buffers to preallocate (done in the prepareWithOutputDimensions: method). Preallocation helps to lessen the chance of frame drops in our recording, in particular during recording startup. If we try to hold on to more buffers than RETAINED_BUFFER_COUNT then the renderer will fail to allocate new buffers from its pool and we will drop frames.

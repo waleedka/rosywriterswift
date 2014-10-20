@@ -83,7 +83,6 @@
 		696D282419CA539900A23D81 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 28365598139FE71B00D09100 /* ReadMe.txt */; };
 		696D282519CA539900A23D81 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7214DBCD182AEF8900EA3F99 /* Images.xcassets */; };
 		696D282B19CA548500A23D81 /* RosyWriterOpenCVRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1FCCE63019B92B1B009D7A6B /* RosyWriterOpenCVRenderer.mm */; };
-		696D282C19CA549100A23D81 /* RosyWriterCPURenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC09BEF19B7F5100025A16E /* RosyWriterCPURenderer.m */; };
 		6F096BFA157ED5110075E328 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F096BF9157ED5110075E328 /* ImageIO.framework */; };
 		6F90DDDA1395CAAA00125BDA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F90DDD91395CAAA00125BDA /* UIKit.framework */; };
 		6F90DDDC1395CAAA00125BDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F90DDDB1395CAAA00125BDA /* Foundation.framework */; };
@@ -106,6 +105,7 @@
 		6FF11C9516A877B100E14D71 /* matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = 6FF11C9116A877B100E14D71 /* matrix.c */; };
 		6FF11C9616A877B100E14D71 /* ShaderUtilities.c in Sources */ = {isa = PBXBuildFile; fileRef = 6FF11C9316A877B100E14D71 /* ShaderUtilities.c */; };
 		7214DBCE182AEF8900EA3F99 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7214DBCD182AEF8900EA3F99 /* Images.xcassets */; };
+		7EDA196819F329EB008F39DB /* RosyWriterCPURenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDA196719F329EB008F39DB /* RosyWriterCPURenderer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,8 +123,6 @@
 		28365598139FE71B00D09100 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 		5DBA2A9819C232E200530F7A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = Resources/en.lproj/Launch.storyboard; sourceTree = SOURCE_ROOT; };
 		5DC09BED19B7F1A70025A16E /* RosyWriterRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = RosyWriterRenderer.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		5DC09BEE19B7F5100025A16E /* RosyWriterCPURenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RosyWriterCPURenderer.h; sourceTree = "<group>"; };
-		5DC09BEF19B7F5100025A16E /* RosyWriterCPURenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RosyWriterCPURenderer.m; sourceTree = "<group>"; };
 		696D282919CA539900A23D81 /* RosyWriterOpenCV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RosyWriterOpenCV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F096BF9157ED5110075E328 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		6F90DDD51395CAAA00125BDA /* RosyWriterOpenGL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RosyWriterOpenGL.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,6 +156,8 @@
 		6FF11C9316A877B100E14D71 /* ShaderUtilities.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ShaderUtilities.c; path = Utilities/GL/ShaderUtilities.c; sourceTree = "<group>"; };
 		6FF11C9416A877B100E14D71 /* ShaderUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShaderUtilities.h; path = Utilities/GL/ShaderUtilities.h; sourceTree = "<group>"; };
 		7214DBCD182AEF8900EA3F99 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Resources/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		7EDA196619F329EA008F39DB /* RosyWriterCPU-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RosyWriterCPU-Bridging-Header.h"; sourceTree = "<group>"; };
+		7EDA196719F329EB008F39DB /* RosyWriterCPURenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RosyWriterCPURenderer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,12 +248,12 @@
 				5DC09BED19B7F1A70025A16E /* RosyWriterRenderer.h */,
 				6FE5A733160BAC8000F6DB2B /* RosyWriterOpenGLRenderer.h */,
 				6FE5A734160BAC8000F6DB2B /* RosyWriterOpenGLRenderer.m */,
-				5DC09BEE19B7F5100025A16E /* RosyWriterCPURenderer.h */,
-				5DC09BEF19B7F5100025A16E /* RosyWriterCPURenderer.m */,
+				7EDA196719F329EB008F39DB /* RosyWriterCPURenderer.swift */,
 				1FCCE62F19B92B1B009D7A6B /* RosyWriterOpenCVRenderer.h */,
 				1FCCE63019B92B1B009D7A6B /* RosyWriterOpenCVRenderer.mm */,
 				1756C9FB19BE5ECE0080DD55 /* RosyWriterCIFilterRenderer.h */,
 				1756C9D319BE5E080080DD55 /* RosyWriterCIFilterRenderer.m */,
+				7EDA196619F329EA008F39DB /* RosyWriterCPU-Bridging-Header.h */,
 			);
 			name = Renderers;
 			sourceTree = "<group>";
@@ -441,6 +441,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0600;
+				TargetAttributes = {
+					1FCCE64619BA80A5009D7A6B = {
+						DevelopmentTeam = 5NJ5689V52;
+					};
+				};
 			};
 			buildConfigurationList = 6F90DDCF1395CAAA00125BDA /* Build configuration list for PBXProject "RosyWriter" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -540,8 +545,8 @@
 			files = (
 				1FCCE64819BA80A5009D7A6B /* main.m in Sources */,
 				1FCCE64919BA80A5009D7A6B /* RosyWriterAppDelegate.m in Sources */,
+				7EDA196819F329EB008F39DB /* RosyWriterCPURenderer.swift in Sources */,
 				1FCCE64A19BA80A5009D7A6B /* RosyWriterViewController.m in Sources */,
-				696D282C19CA549100A23D81 /* RosyWriterCPURenderer.m in Sources */,
 				1FCCE64C19BA80A5009D7A6B /* RosyWriterCapturePipeline.m in Sources */,
 				17E79A3519C8AD89004B709D /* ShaderUtilities.c in Sources */,
 				1FCCE64E19BA80A5009D7A6B /* MovieRecorder.m in Sources */,
@@ -654,15 +659,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RosyWriter-Prefix.pch";
 				INFOPLIST_FILE = "RosyWriter-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = "-DUSE_CPU_RENDERER=1";
 				PRODUCT_NAME = RosyWriterCPU;
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Classes/RosyWriterCPU-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -673,15 +682,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RosyWriter-Prefix.pch";
 				INFOPLIST_FILE = "RosyWriter-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = "-DUSE_CPU_RENDERER=1";
 				PRODUCT_NAME = RosyWriterCPU;
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Classes/RosyWriterCPU-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
