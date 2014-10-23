@@ -52,8 +52,6 @@
 #import "RosyWriterCIFilterRenderer.h"
 #import "RosyWriterOpenCVRenderer.h"
 
-#import "MovieRecorder.h"
-
 #import <CoreMedia/CMBufferQueue.h>
 #import <CoreMedia/CMAudioClock.h>
 #import <AssetsLibrary/AssetsLibrary.h>
